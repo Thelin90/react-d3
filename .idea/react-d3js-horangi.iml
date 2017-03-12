@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/react-d3-library" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/react" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/temp" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="d3-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="d3-array-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="d3-axis-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="d3-box-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="d3-brush-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="d3-chord-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="d3-collection-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="d3-color-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="d3-dispatch-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="d3-dsv-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="d3-ease-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="d3-force-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="d3-format-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="d3.v4" level="application" />
+    <orderEntry type="library" name="d3.v3" level="project" />
+  </component>
+</module>

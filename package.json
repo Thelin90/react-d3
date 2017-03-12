@@ -1,0 +1,22 @@
+{
+  "name": "react-d3js-horangi",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "d3": "^4.7.2",
+    "d3-force": "^1.0.6",
+    "react": "^15.4.2",
+    "react-d3-library": "^1.1.7",
+    "react-dom": "^15.4.2",
+    "react-router": "latest"
+  },
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

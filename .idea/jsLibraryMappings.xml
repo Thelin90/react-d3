@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="PROJECT" libraries="{d3-DefinitelyTyped, d3-array-DefinitelyTyped, d3-axis-DefinitelyTyped, d3-box-DefinitelyTyped, d3-brush-DefinitelyTyped, d3-chord-DefinitelyTyped, d3-collection-DefinitelyTyped, d3-color-DefinitelyTyped, d3-dispatch-DefinitelyTyped, d3-dsv-DefinitelyTyped, d3-ease-DefinitelyTyped, d3-force-DefinitelyTyped, d3-format-DefinitelyTyped, d3.v3, d3.v4, react-d3js-horangi/node_modules}" />
+    <includedPredefinedLibrary name="ECMAScript 6" />
+  </component>
+</project>
