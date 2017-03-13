@@ -10,20 +10,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="d3-DefinitelyTyped" level="application" />
-    <orderEntry type="library" name="d3-array-DefinitelyTyped" level="application" />
-    <orderEntry type="library" name="d3-axis-DefinitelyTyped" level="application" />
-    <orderEntry type="library" name="d3-box-DefinitelyTyped" level="application" />
-    <orderEntry type="library" name="d3-brush-DefinitelyTyped" level="application" />
-    <orderEntry type="library" name="d3-chord-DefinitelyTyped" level="application" />
-    <orderEntry type="library" name="d3-collection-DefinitelyTyped" level="application" />
-    <orderEntry type="library" name="d3-color-DefinitelyTyped" level="application" />
-    <orderEntry type="library" name="d3-dispatch-DefinitelyTyped" level="application" />
-    <orderEntry type="library" name="d3-dsv-DefinitelyTyped" level="application" />
-    <orderEntry type="library" name="d3-ease-DefinitelyTyped" level="application" />
-    <orderEntry type="library" name="d3-force-DefinitelyTyped" level="application" />
-    <orderEntry type="library" name="d3-format-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="d3.v4" level="application" />
-    <orderEntry type="library" name="d3.v3" level="project" />
+    <orderEntry type="library" name="d3.v3" level="application" />
   </component>
 </module>
