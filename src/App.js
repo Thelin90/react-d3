@@ -65,8 +65,6 @@ class App extends Component {
     componentDidMount() {
         const {width, height } = this.props;
 
-        console.log("i am here");
-
         d3.forceSimulation(data.nodes)
             .force("links", d3.forceLink(data.links).distance(50))
             .force("charge", d3.forceManyBody().strength(-120))
@@ -79,23 +77,20 @@ class App extends Component {
 
         const node = svg.selectAll("circle")
             .data(data.nodes)
-            .enter().
-            append("circle")
-            .attr("r", 5)
+            .enter()
+            .append("circle")
+            .attr("r", 20)
             .style('stroke', '#FFFFFF')
-            .style('stroke-width', 1.5)
-            .style("fill", d3.color("#c20003"));
-
-        node.append("title")
-            .text(function(d) {
-                return d.text
+            .style('stroke-width', 3.5)
+            .style("fill",function() {
+                return "hsl(" + Math.random() * 360 + ",100%,50%)";
             });
 
         const link = svg.selectAll('line')
             .data(data.links)
             .enter()
             .append('line')
-            .style('stroke', '#729502')
+            .style('stroke', '#030100')
             .style('stroke-opacity', 0.6);
 
         d3.forceSimulation().on('tick', () => {
@@ -130,9 +125,12 @@ class App extends Component {
 
     render() {
         const {width, height} = this.props;
+
         const style = {
             width,
             height,
+            margin: "100px",
+            marginHeight: "300px",
             border: '1px solid #323232',
         };
 
@@ -143,34 +141,5 @@ class App extends Component {
         );
     }
 }
-
-/*
- const link = svg.append("mountPoint")
- .attr("class", "links")
- .selectAll("line")
- .data(data.links)
- .enter().append("line")
- .style("stroke", d3.color("#bbd8ff"));
- */
-
-
-/* simulation
- .nodes(data.nodes)
- .on("tick", this.ticked);
-
- simulation.force("link")
- .links(data.links);
- /**/
-
-/*
- svg.selectAll('circle')
- .data(data.nodes)
- .enter()
- .append('circles')
- .attr('r', 5)
- .style('stroke',"#FFFFFF")
- .style('stroke-width', 1.5)
- .style("fill", d3.color("#FF3432"));
- */
 
 export default App;
