@@ -2,57 +2,61 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
 var d3 = require('d3');
 
 
 var  data = {
-    "nodes": [{
-        "reference": 5,
-        "year": 0,
-        "text": "Gaming",
-        "tags": ["Academic disturbance"]
-    }, {
-        "reference": 5,
-        "year": 0,
-        "text": "Drinking",
-        "tags": ["Addiction"]
-    }, {
-        "reference": 58,
-        "year": 0,
-        "text": "Running",
-        "tags": ["Addiction"]
-    }, {
-        "reference": 77,
-        "year": 0,
-        "text": "Having fun",
-        "tags": ["Adults"]
-    }, {
-        "reference": 64,
-        "year": 0,
-        "text": "Apathetic users spend short times on web pages, follow no logical order, and make random selections",
-        "tags": ["Apathetic hypertext users3"]
-    }, {
-        "reference": 8,
-        "year": 0,
-        "text": "49.8% of sessions are shorter than 5 seconds",
-        "tags": ["App usage"]
-    }],
-    "links": [{
-        "source": 0,
-        "target": 2
-    }, {
-        "source": 0,
-        "target": 5
-    }, {
-        "source": 1,
-        "target": 5
-    }, {
-        "source": 1,
-        "target": 3
-    }, {
-        "source": 1,
-        "target": 2
-    }
+    "nodes": [
+        {"id": 0,"Object": 0, "text": "STATUS","Source":"55.34.23.54", "color": "blue"},
+        {"id": 1,"Object": 1, "text": "STATUS","Destination":"SQLB", "color": "yellow"},
+        {"id": 2,"Object": 2, "text": "STATUS","Destination":"SQLB23", "color": "yellow"},
+        {"id": 3,"Object": 3, "Source":"55.34.23.54", "color": "green"},
+        {"id": 4,"Object": 4, "Source":"55.34.23.54", "color": "green"},
+        {"id": 5,"Object": 5, "Source":"55.34.23.54", "color": "green"},
+        {"id": 6,"Object": 6, "Source":"55.34.23.54", "color": "green"},
+        {"id": 7,"Object": 7, "Source":"55.34.23.54", "color": "green"},
+        {"id": 8,"Object": 8, "Source":"55.34.23.54", "color": "green"},
+        {"id": 9,"Object": 9, "Source":"55.34.23.54", "color": "green"},
+        {"id": 10,"Object": 10, "Source":"55.34.23.54", "color": "green"},
+        {"id": 11,"Object": 11, "Source":"55.34.23.54", "color": "green"},
+        {"id": 12,"Object": 12, "Destination":"SQLB", "color": "red"},
+        {"id": 13,"Object": 13, "Destination":"SQLB", "color": "red"},
+        {"id": 14,"Object": 14, "Destination":"SQLB", "color": "red"},
+        {"id": 15,"Object": 15, "Destination":"SQLB23", "color": "red"},
+        {"id": 16,"Object": 16, "Destination":"SQLB", "color": "red"},
+        {"id": 17,"Object": 17, "Destination":"SQLB", "color": "red"},
+        {"id": 18,"Object": 18, "Destination":"SQLB", "color": "red"},
+        {"id": 19,"Object": 19, "Destination":"SQLB", "color": "red"},
+        {"id": 20,"Object": 20, "Destination":"SQLB", "color": "red"},
+        {"id": 21,"Object": 21, "Destination":"SQLB", "color": "red"},
+        {"id": 22,"Object": 22, "text": "DOMAINS", "color": "black"}
+    ],
+
+    "links": [
+        {"source": 0, "target": 0, "value": 1},
+        {"source": 0, "target": 3, "value": 1},
+        {"source": 0, "target": 4, "value": 1},
+        {"source": 0, "target": 5, "value": 1},
+        {"source": 0, "target": 6, "value": 1},
+        {"source": 0, "target": 7, "value": 1},
+        {"source": 0, "target": 8, "value": 1},
+        {"source": 0, "target": 9, "value": 1},
+        {"source": 0, "target": 10, "value": 1},
+        {"source": 0, "target": 11, "value": 1},
+        {"source": 1, "target": 12, "value": 1},
+        {"source": 1, "target": 13, "value": 1},
+        {"source": 1, "target": 14, "value": 1},
+        {"source": 2, "target": 15, "value": 1},
+        {"source": 1, "target": 16, "value": 1},
+        {"source": 1, "target": 17, "value": 1},
+        {"source": 1, "target": 18, "value": 1},
+        {"source": 1, "target": 19, "value": 1},
+        {"source": 1, "target": 20, "value": 1},
+        {"source": 1, "target": 21, "value": 1},
+        {"source": 0, "target": 22, "value": 1},
+        {"source": 1, "target": 22, "value": 1},
+        {"source": 2, "target": 22, "value": 1}
     ]
 };
 
@@ -75,23 +79,31 @@ class App extends Component {
             .attr("width", width)
             .attr("height", height);
 
-        const node = svg.selectAll("circle")
-            .data(data.nodes)
-            .enter()
-            .append("circle")
-            .attr("r", 20)
-            .style('stroke', '#FFFFFF')
-            .style('stroke-width', 3.5)
-            .style("fill",function() {
-                return "hsl(" + Math.random() * 360 + ",100%,50%)";
-            });
-
         const link = svg.selectAll('line')
             .data(data.links)
             .enter()
             .append('line')
+            .style('stroke-width', 3.5)
             .style('stroke', '#030100')
             .style('stroke-opacity', 0.6);
+
+        const node = svg.selectAll("circle")
+            .data(data.nodes)
+            .enter()
+            .append("circle")
+            .attr("r", 10)
+            .style('stroke', '#FFFFFF')
+            .style('stroke-width', 3.5)
+            .style("fill", function(d){ return d.color});
+          /*  .style("fill",function() {
+                return "hsl(" + Math.random() * 360 + ",100%,50%)";
+            });*/
+
+        node.append("text")
+            .attr("x", function(d) { return d.x-30; })
+            .attr("y", function(d) { return d.y; })
+            .text(function (d) { return d.text; });
+
 
         d3.forceSimulation().on('tick', () => {
             link
@@ -114,18 +126,15 @@ class App extends Component {
                 })
                 .attr("cy", function(d) {
                     return d.y;
-                });
+                })
         });
 
         console.log(data.nodes);
         console.log(data.links);
     }
 
-
-
     render() {
-        const {width, height} = this.props;
-
+        const {width, height } = this.props;
         const style = {
             width,
             height,
@@ -133,11 +142,13 @@ class App extends Component {
             marginHeight: "300px",
             border: '1px solid #323232',
         };
-
         return (
-            <div style={style} ref="mountPoint">
+        <div className="App-header">
+            <img src={logo} className="App-logo" alt="logo"/>
+            <h2>Welcome to React with D3! Relational graph!</h2>
+            <div style={style} ref="mountPoint"></div>
+        </div>
 
-            </div>
         );
     }
 }
